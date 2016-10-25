@@ -33,11 +33,11 @@ class C2PAP(UnsrtStyle):
         Remove extra line breaks with `sed -i 's| </br>||g'`
         """
 
-        template = toplevel [
+        template = toplevel [ words[
              self.format_names('author'), self.newline(),
              tag('b') [field('title')], self.newline(),
              self.format_web_refs(entry)
-        ]
+        ]]
 
         return template.format_data(entry)
 
@@ -59,7 +59,7 @@ class Backend(HTML):
     def format_tag(self, tag, text):
         # line break should only be output once
         if tag == 'br':
-            return r'<br>'
+            return r'<br />'
         else:
             return super(Backend, self).format_tag(tag, text)
 
@@ -71,4 +71,4 @@ class Backend(HTML):
         self.output(u'</body></html>\n')
 
     def write_entry(self, key, label, text):
-        self.output(u'%s<br>\n\n' % text)
+        self.output(u'%s\n' % text)
