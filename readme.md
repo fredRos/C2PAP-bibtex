@@ -8,15 +8,16 @@ This packages provides plugins for `pybtex`.
 Installation
 ------------
 
-    pip3 install [--user] c2pap-bibtex
+Clone this repo, then
+
+    pip3 install [--user] .
 
 Workflow
 --------
 
 ### Search for new articles
 
-On ads with full-text search for `C2PAP` and possibly restricting the year.
-https://ui.adsabs.harvard.edu/#search/q=full%3A%22C2PAP%22%20year%3A2016&sort=date%20desc%2C%20bibcode%20desc
+On ads with full-text search for `C2PAP` and possibly restricting the year, use this [URL](https://ui.adsabs.harvard.edu/#search/q=full%3A%22C2PAP%22%20year%3A2016&sort=date%20desc%2C%20bibcode%20desc).
 
 ### Export to bibtex
 
