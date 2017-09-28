@@ -17,7 +17,10 @@ Workflow
 
 ### Search for new articles
 
-On ads with full-text search for `C2PAP` and possibly restricting the year, use this <a href=https://ui.adsabs.harvard.edu/#search/q= year%3A2017 AND (full%3A"C2PAP" OR aff%3A"C2PAP" OR author%3A"Beaujean%2C Frederik"OR author%3A"Petkova%2C Margarita" OR author%3A"Krukau%2C Alexey" OR author%3A"Hubber%2C David")&sort=date desc%2C bibcode desc>URL</a>.
+On ads with full-text search for `C2PAP` and possibly restricting the year, use got to https://ui.adsabs.harvard.edu 
+and enter this query
+
+     year:2017  AND (full:"C2PAP" OR aff:"C2PAP" OR author:"Beaujean, Frederik"OR author:"Petkova, Margarita" OR author:"Krukau, Alexey" OR author:"Hubber, David")
 
 ### Export to bibtex
 
