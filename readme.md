@@ -21,6 +21,10 @@ On ads with full-text search for `C2PAP` and possibly restricting the year, use 
 and enter this query
 
      year:2017  AND (full:"C2PAP" OR aff:"C2PAP" OR author:"Beaujean, Frederik"OR author:"Petkova, Margarita" OR author:"Krukau, Alexey" OR author:"Hubber, David")
+     
+The full list of publications used for the brochure 
+
+    (((full:"C2PAP" OR aff:"C2PAP" OR ack:"C2PAP") OR (author:"Beaujean, Frederik" OR author:"Petkova, Margarita" OR author:"Krukau, Alexey" OR (author:"Cadolle Bel, Marion" AND aff:"Excellence Cluster Universe") OR (author:"Hubber, David" AND year:2017) OR (author:"Mirkazemi, Mohammad" AND year:2016-2017))) AND (year:2014-2017) OR (arxiv:"arxiv:1702.06546" OR doi:"10.3390/galaxies5030049" OR doi:"10.3390/galaxies5030035" OR doi:"10.1017/S1743921315003506" OR doi:"doi:10.1017/S1743921314009491" OR doi:"10.1140/epjc/s10052-017-4700-5" OR doi:"10.1007/JHEP02(2017)117" OR doi:"10.1103/PhysRevD.94.052009" OR doi:"10.1016/j.physletb.2017.08.047" OR doi:"10.1016/j.physletb.2016.07.042" OR doi:"10.1103/PhysRevD.92.072004" OR doi:"10.1103/PhysRevD.93.052002" OR doi:"10.1140/epjc/s10052-016-4184-8" OR doi:"10.1007/JHEP10(2015)134" OR doi:"10.1140/epjc/s10052-015-3408-7" OR doi:"10.1140/epjc/s10052-015-3544-0" OR doi:"10.1016/j.physletb.2014.09.008" OR doi:"10.1140/epjc/s10052-015-3534-2" OR doi:"10.1007/JHEP04(2015)116" OR doi:"10.1140/epjc/s10052-015-3373-1" OR doi:"10.1007/JHEP01(2015)068" OR doi:"10.1103/PhysRevD.90.052004" OR doi:"10.1088/1742-6596/513/4/042049" OR doi:"10.1103/PhysRevD.92.072001"))
 
 ### Export to bibtex
 
