@@ -50,24 +50,25 @@ Download spreadsheet from google docs as openoffice. Open and save the
 five columns `Title, Proposers, Areas, CPUh, Contact` as a CSV file in
 UTF8.
 
-Clean the data: remove empty rows, line breaks in cells, missing values etc.
+Clean the data: remove empty rows, line breaks in cells, fill in any missing values etc.
 
 In `julia`,
 
 ``` julia
+import CSV
+using DataFrames
+long_names = Dict("Fred"=>"F. Beaujean", "Alexey"=>"A. Krukau", "Jovan"=>"J. Mitrevski", "Mohammad"=>"M. Mirkazemi", "David"=>"D. Hubber", "Margarita"=>"M. Petkova")
+filename = "/tmp/c2pap.csv"
+frame = CSV.read(filename, weakrefstrings=false) # a DataFrame
+for (i, row) in enumerate(eachrow(frame))
+    t = string(get(row[1]))
+    p = string(get(row[2]))
+    ra = string(get(row[3]))
+    cpuh = get(row[4])*1000
+    supp = long_names[string(get(row[5]))]
+    println("Project $i/2018: &quot;<b>$t</b>&quot;<br />Proposers: $p<br />Research Area: $ra<br />CPU hours: $cpuh<br />C2PAP support: $supp")
+end
 
-    import CSV
-    using DataFrames
-    long_names = Dict("Fred"=>"F. Beaujean", "Alexey"=>"A. Krukau", "Jovan"=>"J. Mitrevski", "Mohammad"=>"M. Mirkazemi")
-    frame = CSV.read("/home/beaujean/Documents/short.csv", weakrefstrings=false) # a DataFrame
-    for (i, row) in enumerate(eachrow(frame))
-        t = string(get(row[1]))
-        p = string(get(row[2]))
-        ra = string(get(row[3]))
-        cpuh = get(row[4])*1000
-        supp = long_names[string(get(row[5]))]
-        println("Project $i/2017: &quot;<b>$t</b>&quot;<br />Proposers: $p<br />Research Area: $ra<br />CPU hours: $cpuh<br />C2PAP support: $supp")
-    end
 ```
 
 Some test data for 2017
