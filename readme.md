@@ -55,6 +55,8 @@ Clean the data: remove empty rows, line breaks in cells, fill in any missing val
 In `julia`,
 
 ``` julia
+Pkg.add("CSV")
+Pkg.add("DataFrames")
 import CSV
 using DataFrames
 long_names = Dict("Fred"=>"F. Beaujean", "Alexey"=>"A. Krukau", "Jovan"=>"J. Mitrevski", "Mohammad"=>"M. Mirkazemi", "David"=>"D. Hubber", "Margarita"=>"M. Petkova")
